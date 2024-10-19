@@ -1,0 +1,59 @@
+.skin-blue .main-header .logo {
+    background-color: #00406d
+}
+
+.skin-blue .main-header .navbar {
+    background-color: #00548e;
+}
+
+.content-wrapper, .right-side {
+    background-color: #eeeeee;
+}
+
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #131516;
+}
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+    border-left-color: #2978b6;
+}
+
+.skin-blue .sidebar-menu > li.header {
+    background-color: #101112;
+}
+
+.sidebar-menu > li {
+    background-color: #151718;
+}
+
+.sidebar-menu > li a.active {
+    color: #4badc3;
+}
+
+.sidebar-menu > li a {
+    color: #535f68;
+}
+
+.bg-aqua, .callout.callout-info, .alert-info, .label-info, .modal-info .modal-body {
+    background-color: #2978b6;
+}
+
+.bg-first, .bg-second, .bg-third, .bg-fourth {
+    color: #ffffff;
+}
+
+.bg-first {
+    background-color: #079084;
+}
+
+.bg-second {
+    background-color: #2978b6;
+}
+
+.bg-third {
+    background-color: #072a43;
+}
+
+.bg-fourth {
+    background-color: #00548e;
+}

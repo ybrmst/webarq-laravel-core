@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+body {
+    font: 12px/18px verdana;
+    color: #666666;
+    overflow-y: scroll;
+    background: transparent url('../images/general/bg-body.jpg') center repeat;
+}
+
+#app_login {
+    position: fixed;
+    width: 330px;
+    left: 50%;
+    margin-left: -165px;
+    top: 50%;
+    margin-top: -200px;
+}
+
+#app_login .wrapper {
+    background-color: #FFF;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+#app_login .wrapper .head {
+    background-image: url(../images/general/bg-head-login.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    height: 82px;
+}
+
+#app_login .wrapper .head .logo {
+    background-image: url(../images/general/bg-logo.png);
+    background-position: right bottom;
+    height: 77px;
+    width: 237px;
+}
+
+#app_login .wrapper .head .logo img {
+    margin-top: 5px;
+    margin-left: 18px;
+}
+
+#app_login .wrapper .head img.logo-login {
+    margin-top: 17px;
+    margin-right: 10px;
+}
+
+#app_login .wrapper .footer {
+    font: 12px/35px arial;
+    color: #fff;
+    background-color: #094b69;
+    display: block;
+    text-align: center;
+}
+
+#app_login .copyright {
+    background-image: url(../images/general/shadow-applogin.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 35px;
+    text-align: center;
+    margin-top: -13px;
+    z-index: 4;
+}
+
+#app_login .copyright p {
+    font-size: 11px;
+    margin-bottom: 7px;
+}
+
+.left_section {
+    width: 71%;
+    float: left;
+    margin-right: 1%;
+}
+
+.right_section {
+    width: 28%;
+    float: right;
+}
+
+table.login {
+    width: 260px;
+    margin-right: auto;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+table.login td {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+
+form.login {
+    color: #666;
+}
+
+form.login input[type=email] {
+}
+
+form.login .txt_input {
+    width: 275px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    height: 39px;
+}
+
+form.login .txt_input#email {
+    background-image: url(../images/general/form-email.jpg);
+}
+
+form.login .txt_input#password {
+    background-image: url(../images/general/form-password.jpg);
+}
+
+a {
+    font-size: 11px;
+    color: #1076bc;
+    text-decoration: none;
+}
+
+form.login .txt_input input {
+    float: right;
+    margin-right: 15px;
+    width: 220px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    line-height: 20px;
+}
+
+form.login .btn-login {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    background-image: url(../images/general/btn-login.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 32px;
+    width: 144px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.alert {
+    padding: 0 30px;
+}
+
+.alert h4 {
+    margin: 5px 0;
+}
+
+.alert span {
+    display: block;
+    text-align: justify;
+}
+
+.alert-danger {
+    color: #ff0000;
+}
+
+input[type="submit"].no-bg {
+    border: none;
+    padding: 10px;
+    width: 122px;
+    background-color: #e0e0e0;
+}
