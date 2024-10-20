@@ -11,6 +11,7 @@ namespace Webarq\Manager;
 
 use Html;
 use Illuminate\Support\Traits\Macroable;
+use Illuminate\Support\Str;
 use URL;
 
 class ValueModifierManager
@@ -44,11 +45,11 @@ class ValueModifierManager
             $attr = [];
 
             if (0 !== (int)$width) {
-                $attr['style'] = 'width: ' . $width . (!ends_with($width, '%') ? 'px;' : ';');
+                $attr['style'] = 'width: ' . $width . (!Str::endsWith($width, '%') ? 'px;' : ';');
             }
 
             if (0 !== (int)$height) {
-                $attr['style'] = 'height: ' . $height . (!ends_with($height, '%') ? 'px;' : ';');
+                $attr['style'] = 'height: ' . $height . (!Str::endsWith($height, '%') ? 'px;' : ';');
             }
 
             return is_file($path)

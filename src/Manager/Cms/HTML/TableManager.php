@@ -18,6 +18,7 @@ use Webarq\Manager\AdminManager;
 use Webarq\Manager\Cms\HTML\Table\Driver\AbstractManager;
 use Webarq\Manager\SetPropertyManagerTrait;
 use Webarq\Reader\ModuleConfigReader;
+use Illuminate\Support\Str;
 
 class TableManager extends \Webarq\Manager\HTML\TableManager
 {
@@ -548,7 +549,7 @@ class TableManager extends \Webarq\Manager\HTML\TableManager
                 $row = $this->body->addRow(array_get($this->headers, 'wrapper', 'tr'), $attr);
 
                 foreach ($headers as $key => $setting) {
-                    if (starts_with($key, '.')) {
+                    if (Str::startsWith($key, '.')) {
                         $path = explode('.', substr($key, 1));
                         $val = clone $item;
                         while ([] !== $path) {
@@ -689,7 +690,7 @@ class TableManager extends \Webarq\Manager\HTML\TableManager
 //        Loop url queries
         if ([] !== ($queries = request()->query())) {
             foreach ($queries as $k => $v) {
-                if (starts_with($k, 'w:') || starts_with($k, 's:')) {
+                if (Str::startsWith($k, 'w:') || Str::startsWith($k, 's:')) {
                     $arr[] = $k;
                 }
             }

@@ -14,6 +14,7 @@ use Webarq\Info\ModuleInfo;
 use Webarq\Info\PanelInfo;
 use Webarq\Info\TableInfo;
 use Webarq\Manager\AdminManager;
+use Illuminate\Support\Str;
 
 /**
  * Class PanelManager
@@ -169,10 +170,10 @@ class PanelManager
         $params = [];
 // Injected params
         if (is_string($permalink)) {
-            if (starts_with($permalink, '.')) {
+            if (Str::startsWith($permalink, '.')) {
                 $params = explode(',', substr($permalink, 1));
                 $permalink = true;
-            } elseif (starts_with($permalink, '?')) {
+            } elseif (Str::startsWith($permalink, '?')) {
                 $params = explode(',', substr($permalink, 1));
                 $permalink = null;
             }

@@ -16,6 +16,7 @@ use URL;
 use Wa;
 use Webarq\Manager\TreeManager;
 use Webarq\Model\MenuModel;
+use Illuminate\Support\Str;
 
 class MenuManager extends TreeManager
 {
@@ -264,7 +265,7 @@ class MenuManager extends TreeManager
      */
     public function __call($method, array $arg)
     {
-        if (starts_with($method, 'generate')) {
+        if (Str::startsWith($method, 'generate')) {
             $method = strtolower(substr($method, 8));
             $generate = true;
         }
@@ -409,9 +410,9 @@ class MenuManager extends TreeManager
                 foreach (\Wl::getCodes() as $c) {
                     if ($u === $c) {
                         return URL::trans('', $attr, $secure, $lang);
-                    } elseif (starts_with($u, $c . '/')) {
+                    } elseif (Str::startsWith($u, $c . '/')) {
                         return URL::trans(substr($u, 3), $attr, $secure, $lang);
-                    } elseif (starts_with($u, $c . '?')) {
+                    } elseif (Str::startsWith($u, $c . '?')) {
                         return URL::trans(substr($u, 2), $attr, $secure, $lang);
                     }
                 }

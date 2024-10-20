@@ -111,8 +111,8 @@ class StrLaravel
          * @param string $separator
          */
         Str::macro('isStartsWith', function($primary, $seconder, $separator = '_'){
-            return starts_with($primary, $seconder . $separator)
-                    || starts_with($primary, str_singular($seconder) . $separator);
+            return Str::startsWith($primary, $seconder . $separator)
+                    || Str::startsWith($primary, str_singular($seconder) . $separator);
         });
 
         /**

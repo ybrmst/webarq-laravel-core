@@ -8,7 +8,7 @@
 
 namespace Webarq\Laravel;
 
-
+use Illuminate\Support\Str;
 use Collective\Html\HtmlServiceProvider;
 use Html;
 use URL;
@@ -27,7 +27,7 @@ class HtmlProvider extends HtmlServiceProvider
 
             if (!URL::isValidUrl($str)) {
                 $str = URL::trans($str, [], $secure);
-            } elseif (!starts_with($str, url(''))) {
+            } elseif (!Str::startsWith($str, url(''))) {
                 $options += ['target' => '_blank', 'rel' => 'nofollow'];
             }
 

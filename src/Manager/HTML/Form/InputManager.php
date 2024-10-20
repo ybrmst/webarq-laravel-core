@@ -12,6 +12,7 @@ namespace Webarq\Manager\HTML\Form;
 use Illuminate\Contracts\Support\Htmlable;
 use Webarq\Manager\Cms\HTML\Form\RulesManager;
 use Webarq\Manager\HTML\ElementManager;
+use Illuminate\Support\Str;
 
 class InputManager implements Htmlable
 {
@@ -147,7 +148,7 @@ class InputManager implements Htmlable
             $this->info = $this->info->toHtml();
         }
         $input = $this->input->toHtml();
-        if (starts_with($this->containers['input'], ':')) {
+        if (Str::startsWith($this->containers['input'], ':')) {
             return view(substr($this->containers['input'], 1), [
                     'title' => $this->title,
                     'info' => $this->info,

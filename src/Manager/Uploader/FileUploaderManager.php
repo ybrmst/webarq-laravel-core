@@ -10,6 +10,7 @@ namespace Webarq\Manager\Uploader;
 
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Illuminate\Support\Str;
 
 class FileUploaderManager
 {
@@ -77,7 +78,7 @@ class FileUploaderManager
     {
 // Make sure file name has it's extension
         $ext = $this->file->getClientOriginalExtension();
-        if (!ends_with($this->name, $ext)) {
+        if (!Str::endsWith($this->name, $ext)) {
             return $this->name . '.' . $ext;
         }
 

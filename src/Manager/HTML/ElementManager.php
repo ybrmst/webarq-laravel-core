@@ -13,6 +13,7 @@ namespace Webarq\Manager\HTML;
 
 use Html;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Support\Str;
 
 
 /**
@@ -149,7 +150,7 @@ class ElementManager implements Htmlable
 
         if ('' === $container || null === $container) {
             $this->html = $html;
-        } elseif (starts_with($container, ':')) {
+        } elseif (Str::startsWith($container, ':')) {
             $this->html = view(substr($container, 1), ['html' => $html] + $attr)->render();
         } elseif (str_contains($container, ':html')) {
             $this->html = str_replace(':html', $html, $container);

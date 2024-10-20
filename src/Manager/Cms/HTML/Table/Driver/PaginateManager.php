@@ -73,7 +73,7 @@ class PaginateManager extends AbstractManager
 
         foreach ($columns as $i => &$name) {
 // This is a relation object
-            if (starts_with($name, '.')) {
+            if (Str::startsWith($name, '.')) {
                 unset($columns[$i]);
                 continue;
             }

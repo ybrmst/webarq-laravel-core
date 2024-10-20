@@ -43,7 +43,7 @@ class Wa
     {
         $trans = false;
 
-        if (starts_with($key, 'trans::')) {
+        if (Str::startsWith($key, 'trans::')) {
             $key = substr($key, 7);
 
             $trans = true;
@@ -167,7 +167,7 @@ class Wa
             $path = $this->compilePathName($path);
             $class = implode('\\', $path);
 // Suffixed class with root name space
-            if (!ends_with($class, '$')) {
+            if (!Str::endsWith($class, '$')) {
                 $class .= $path[0];
             } else {
                 $class = substr($class, 0, -1);
@@ -183,7 +183,7 @@ class Wa
     {
         foreach ($path as &$item) {
 // Do not modified item value
-            if (ends_with($item, '!')) {
+            if (Str::endsWith($item, '!')) {
                 $item = substr($item, 0, -1);
             } else {
                 $item = studly_case($item);
