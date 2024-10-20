@@ -28,3 +28,16 @@ if (! function_exists('array_pull')) {
       return Illuminate\Support\Arr::pull($array, $key);
   }
 }
+
+if (! function_exists('studly_case')) {
+  /**
+   * Convert a value to studly caps case.
+   *
+   * @param  string  $value
+   * @return string
+   */
+  function studly_case($value)
+  {
+      return Illuminate\Support\Str::studly($value);
+  }
+}
