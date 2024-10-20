@@ -11,7 +11,10 @@
   "autoload": {
     "psr-4": {
       "Webarq\\": "src"
-    }
+    },
+    "files": [
+        "app/Helpers/helpers.php"
+    ]
   },
   "require": {
     "laravel/framework": "^8.75",
