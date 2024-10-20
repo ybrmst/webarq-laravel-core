@@ -41,3 +41,17 @@ if (! function_exists('studly_case')) {
       return Illuminate\Support\Str::studly($value);
   }
 }
+
+if (! function_exists('snake_case')) {
+  /**
+   * Convert a value to snake case.
+   *
+   * @param  string  $value
+   * @param  string|null  $delimiter
+   * @return string
+   */
+  function snake_case($value, $delimiter = '_')
+  {
+      return Illuminate\Support\Str::snake($value, $delimiter);
+  }
+}
