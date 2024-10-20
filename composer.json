@@ -8,23 +8,21 @@
       "email": "simangunsong.binduraja@gmail.com"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-	  "version": "dev-master",
-      "url": "gitwebarq@webarq-laravel-core.dev.webarq.net:~/git/webarq-laravel-core.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Webarq\\": "src"
     }
   },
   "require": {
-    "laravel/framework": "5.3.*",
-    "laravelcollective/html": "^5.3.0",
+    "laravel/framework": "^8.75",
+    "laravelcollective/html": "6.2.0",
     "intervention/image": "^2.3",
-    "nesbot/carbon": "^1.22",
-    "barryvdh/laravel-elfinder": "^0.3.10"
+    "nesbot/carbon": "^2.53.1",
+    "barryvdh/laravel-elfinder": "0.4.7"
+  },
+  "config": {
+    "allow-plugins": {
+      "kylekatarnls/update-helper": true
+    }
   }
 }
